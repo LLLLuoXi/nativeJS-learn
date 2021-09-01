@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-08-29 11:53:07
- * @LastEditTime: 2021-09-01 23:39:30
+ * @LastEditTime: 2021-09-01 23:42:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \nativeJS-exercise\函数\MyFunctions.js
