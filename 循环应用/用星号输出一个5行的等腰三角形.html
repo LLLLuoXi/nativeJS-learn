@@ -1,0 +1,25 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-08-22 10:50:46
+ * @LastEditTime: 2021-08-22 11:25:26
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \nativeJS-exercise\循环应用\用星号输出一个5行的等腰三角形.html
+-->
+<script>
+    var r = 5
+    for (var i = 1; i <= r; i++) {
+        var str = ''
+        //拼接空格 数量为r-i
+        for (var j = 0; j < r - i; j++) {
+            str += ' '
+        }
+
+        //凭借星号 数量为2i-1
+        for (var k = 0; k < 2 * i - 1; k++) {
+            str += '*'
+        }
+        console.log(str)
+    }
+
+</script>
