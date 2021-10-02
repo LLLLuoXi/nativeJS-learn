@@ -1,0 +1,67 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-10-02 08:58:47
+ * @LastEditTime: 2021-10-02 11:06:06
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \nativeJS-exercise\little-demo\移除列表.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <p>
+            <button id="btnClear">点击清空</button>
+        </p>
+        <ul class="list">
+            <li>项目1<button>删除</button></li>
+            <li>项目2<button>删除</button></li>
+            <li>项目3<button>删除</button></li>
+            <li>项目4<button>删除</button></li>
+            <li>项目5<button>删除</button></li>
+            <li>项目6<button>删除</button></li>
+            <li>项目7<button>删除</button></li>
+            <li>项目8<button>删除</button></li>
+            <li>项目9<button>删除</button></li>
+            <li>项目10<button>删除</button></li>
+        </ul>
+    </div>
+
+    <script>
+        var btnClear = document.getElementById("btnClear");
+        var ul = document.querySelector(".list");
+        btnClear.onclick = function() {
+            ul.innerHTML = "";
+        }
+
+        var btns = ul.querySelectorAll('button')
+            // for (var i = 0; i < btns.length; i++) {
+            //     // var b = btns[i]
+            //     var b = btns[i];
+            //     (function(b) {
+            //         b.onclick = function() {
+            //             b.parentNode.remove();
+            //         }
+            //     }(b));
+
+        // }
+
+        Array.from(btns).forEach(function(b) {
+            b.onclick = function() {
+                b.parentNode.remove();
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>
