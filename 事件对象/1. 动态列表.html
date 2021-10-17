@@ -1,0 +1,62 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-10-16 10:11:42
+ * @LastEditTime: 2021-10-16 10:18:57
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \nativeJS-exercise\4. [作业讲解]事件对象\1. 动态列表.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <input type="text" id="txt">
+        <button id="btnAdd">添加</button>
+    </p>
+    <ul>
+        <li>
+            <span>列表1</span>
+            <button>删除</button>
+        </li>
+        <li>
+            <span>列表2</span>
+            <button>删除</button>
+        </li>
+        <li>
+            <span>列表3</span>
+            <button>删除</button>
+        </li>
+    </ul>
+
+    <script>
+        var btnAdd = document.getElementById("btnAdd");
+        var txt = document.getElementById("txt");
+        var ul = document.getElementsByTagName("ul")[0];
+
+        btnAdd.onclick = () => {
+            var value = txt.value;
+            var li = document.createElement('li');
+            li.innerHTML = `<span>${value}</span>
+            <button>删除</button>`
+            ul.appendChild(li)
+        }
+
+        ul.onclick = (e) => {
+            if (e.target.tagName === 'BUTTON') {
+                e.target.parentElement.remove()
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
