@@ -1,0 +1,78 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-06 09:10:45
+ * @LastEditTime: 2021-11-06 09:50:24
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \nativeJS-exercise\APM计算器\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        倒计时<span id="spanclock">10</span>
+    </p>
+    <p>点击数<span id="spannum">0</span></p>
+    <p>
+        <button id="btnadd">点击</button>
+        <button id="btnreset">重置</button>
+    </p>
+    <script>
+        var num = 0,
+            clock = 10,
+            timer,
+            isOver = false, // 是否结束
+            spanNum = document.getElementById('spannum'),
+            btnAdd = document.getElementById('btnadd'),
+            btnReset = document.getElementById('btnreset'),
+            spanClock = document.getElementById('spanclock');
+        btnAdd.onclick = function() {
+            if (num === 0) {
+                setClock()
+            }
+            if (!isOver) {
+                setNum(num + 1)
+            }
+
+        }
+        btnReset.onclick = function() {
+            setNum(0)
+            clock = 10;
+            spanClock.innerText = clock
+            isOver = false
+        }
+
+        function setNum(n) {
+            num = n
+            spanNum.innerText = num
+        }
+
+        function setClock() {
+            if (timer) {
+                return
+            }
+            timer = setInterval(() => {
+                clock--;
+                spanClock.innerText = clock
+                if (clock === 0) {
+                    clearInterval(timer)
+                    timer = null
+                    isOver = true
+                }
+
+
+            }, 1000)
+        }
+    </script>
+
+</body>
+
+</html>

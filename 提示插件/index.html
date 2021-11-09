@@ -1,0 +1,45 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-06 10:48:56
+ * @LastEditTime: 2021-11-10 00:07:56
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \nativeJS-exercise\提示插件\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>dianji</button>
+    <script src="../plugins/confirm.js"></script>
+    <script>
+        document.querySelector('button').onclick = function() {
+            // myPlugin.openConfirm({
+            //     title: '删除的提示',
+            //     content: '请问真的要删除吗',
+            //     confirmText: 'OK',
+            //     cancelText: 'Cancel',
+            //     confirmClass: 'confirm,',
+            //     cancelClass: 'cancel,',
+            //     onconfirm: function() {
+            //         console.log('点击了确定');
+            //     },
+            //     oncancel: function() {
+            //         console.log('点击了取消');
+            //     }
+            // })
+            myPlugin.openConfirm('传了一个字符串')
+        }
+    </script>
+
+
+</body>
+
+</html>
