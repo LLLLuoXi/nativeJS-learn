@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-11-06 10:48:30
- * @LastEditTime: 2021-11-10 00:07:44
+ * @LastEditTime: 2021-11-13 16:52:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \nativeJS-exercise\plugins\confirm.js
@@ -20,12 +20,6 @@ window.myPlugin.openConfirm = (function() {
         btnConfirm,
         btnCancel,
         isRegEvent = false; //是否注册个过事件
-
-
-
-
-
-
 
     function openConfirm(opts) {
         if (typeof opts === 'string') {

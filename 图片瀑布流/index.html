@@ -1,0 +1,46 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-13 12:11:52
+ * @LastEditTime: 2021-11-13 16:32:19
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \nativeJS-exercise\图片瀑布流\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        border: 2px solid;
+        height: 3000px;
+    }
+</style>
+
+<body>
+    <div class="container"></div>
+    <script src="../plugins/waterfall.js"></script>
+    <script src="../plugins/helpers.js"></script>
+    <script>
+        var srcs = [];
+        for (var i = 0; i <= 40; i++) {
+            srcs.push(`img/${i}.jpg`)
+        }
+
+        myPlugin.createWaterFall({
+            imgSrcs: srcs, //图片路径的数组
+            imgWidth: 220, // 单张图片的宽度
+            container: document.querySelector('.container')
+
+        })
+    </script>
+</body>
+
+</html>

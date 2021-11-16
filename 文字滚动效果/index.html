@@ -1,0 +1,83 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-10 23:05:39
+ * @LastEditTime: 2021-11-10 23:18:35
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \nativeJS-exercise\文字滚动效果\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        background-color: #b3effe;
+        height: 50px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+    
+    .left {
+        float: left;
+        height: 30px;
+        line-height: 30px;
+    }
+    
+    .title::after {
+        content: '|';
+        margin-left: 20px;
+        font-size: 27px;
+        vertical-align: -2px;
+        color: #ccc;
+    }
+    
+    .left ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-left: 20px;
+        height: 30px;
+        overflow: hidden;
+    }
+    
+    .left ul li {
+        height: 30px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="left title">最新公告</div>
+        <div class="left">
+            <ul>
+                <li>
+                    1.Lorem ipsum dolor sit amet
+                </li>
+                <li>
+                    2.Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                    3.Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </li>
+                <li>
+                    4.Lorem ipsum, dolor sit amet consectetur adipisicing elit
+                </li>
+                <li>
+                    5.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
