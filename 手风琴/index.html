@@ -1,0 +1,110 @@
+<!--
+ * @Author: luoxi
+ * @LastEditTime: 2021-12-11 23:33:39
+ * @LastEditors: your name
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 300px;
+            margin: 0 auto;
+        }
+        
+        .container .menu h3 {
+            background-color: #F0F0F0;
+            padding: 5px 6px 4px 6px;
+            border: 1px solid #E0E0E0;
+            cursor: pointer;
+            font-size: 16px;
+            color: #555;
+            font-weight: normal;
+        }
+        
+        .container .menu .items {
+            padding-left: 20px;
+            display: none;
+            overflow: hidden;
+        }
+        
+        .container .menu .items.active {
+            display: block;
+        }
+        
+        .container .menu a {
+            display: block;
+            text-decoration: none;
+            font-size: 14px;
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <h3>电影</h3>
+            <div class="items active">
+                <a href="">电影名</a>
+                <a href="">电影名</a>
+                <a href="">电影名</a>
+                <a href="">电影名</a>
+                <a href="">电影名</a>
+                <a href="">电影名</a>
+                <a href="">电影名</a>
+            </div>
+        </div>
+        <div class="menu">
+            <h3>书籍</h3>
+            <div class="items">
+                <a href="">书籍名</a>
+                <a href="">书籍名</a>
+                <a href="">书籍名</a>
+                <a href="">书籍名</a>
+                <a href="">书籍名</a>
+                <a href="">书籍名</a>
+                <a href="">书籍名</a>
+            </div>
+        </div>
+        <div class="menu">
+            <h3>游戏</h3>
+            <div class="items">
+                <a href="">游戏名</a>
+                <a href="">游戏名</a>
+                <a href="">游戏名</a>
+                <a href="">游戏名</a>
+                <a href="">游戏名</a>
+                <a href="">游戏名</a>
+                <a href="">游戏名</a>
+            </div>
+        </div>
+        <div class="menu">
+            <h3>动漫</h3>
+            <div class="items">
+                <a href="">动漫名</a>
+                <a href="">动漫名</a>
+                <a href="">动漫名</a>
+                <a href="">动漫名</a>
+                <a href="">动漫名</a>
+                <a href="">动漫名</a>
+                <a href="">动漫名</a>
+            </div>
+        </div>
+    </div>
+    <script src=".././plugins/helpers.js"></script>
+    <script src=".././plugins/animate.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
