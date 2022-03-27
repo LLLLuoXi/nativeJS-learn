@@ -1,0 +1,60 @@
+<!--
+ * @Author: luoxi
+ * @LastEditTime: 2022-03-27 02:50:38
+ * @LastEditors: your name
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="" id="btn">下载</a>
+    <label for="fileInput">Choose a html file:</label>
+    <input type="file" id="fileInput" />
+    <label for="imgInput">Choose a picture:</label>
+    <input type="file" id="imgInput" name="tupian" accept="image/png" />
+
+    <script>
+      const str = `<div>
+      <p>LLLLuoxi</p>
+    </div>`;
+
+      const blob = new Blob([str], {
+        type: "text/html",
+      });
+      console.log("blob", blob);
+      console.log("url", URL.createObjectURL(blob));
+
+      btn.onclick = function () {
+        this.setAttribute("download", "luoxi.html");
+        this.href = URL.createObjectURL(blob);
+      };
+
+      // 选择本地文件下载
+      fileInput.onchange = function (e) {
+        const file = e.target.files[0];
+        const a = document.createElement("a");
+        a.setAttribute("download", "luoxi.html");
+        a.href = URL.createObjectURL(file);
+        a.click();
+      };
+
+      // 图片预览
+      imgInput.onchange = function (e) {
+        const file = e.target.files[0];
+        const img = new Image();
+        const fileRead = new FileReader();
+        fileRead.readAsDataURL(file);
+        fileRead.onload = function () {
+          img.src = fileRead.result;
+        };
+        document.body.appendChild(img);
+      };
+    </script>
+  </body>
+</html>
