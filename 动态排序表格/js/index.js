@@ -1,11 +1,8 @@
 /*
  * @Author: luoxi
- * @LastEditTime: 2022-06-02 11:19:09
+ * @LastEditTime: 2022-06-02 11:47:03
  * @LastEditors: your name
- * @Description: 
- * 1.复选框的关联操作
- *  1.1 全选
- *  1.2 
+ * @Description: 动态排序表格
  */
 
 (function () {
@@ -14,8 +11,6 @@
   const checkOneLists = tbody.querySelectorAll('input')
   const ths = document.querySelectorAll('th')
   const rows = tbody.querySelectorAll("tr")
-
-  console.log(rows);
 
   const init = function () {
     console.log('程序入口');
@@ -29,9 +24,7 @@
     for (let i = 0; i < ths.length; i++) {
       handleThsClick(i, ths[i])
     }
-
   }
-
 
   // 全选按钮事件绑定函数
   const onCheckAll = function () {
@@ -49,7 +42,6 @@
     let checkNumber = 0;
     for (let i = 0; i < checkOneLists.length; i++) {
       checkOneLists[i].checked && checkNumber++;
-
     }
     console.log(checkNumber);
     checkAll.checked = checkNumber === checkOneLists.length;
@@ -67,10 +59,8 @@
           return a.getElementsByTagName('td')[index].innerHTML.localeCompare(b.getElementsByTagName('td')[index].innerHTML, 'zh')
         } else {
           // 数字处理
-          // console.log(a.getElementsByTagName('td')[index].innerHTML);
           return a.getElementsByTagName('td')[index].innerHTML - b.getElementsByTagName('td')[index].innerHTML
         }
-
       })
       console.log(arr);
       // 循环已经排序完成的数组，进行插入操作
@@ -78,14 +68,7 @@
         // appendChild 会将已经有的DOM结构从原来位置移动到容器最后面
         tbody.appendChild(arr[i])
       }
-
     })
-    // console.log(index);
   }
-
-
-
   init()
-
-
 })()
